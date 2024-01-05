@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View, Button } from "react-native";
 import { useRouter } from "expo-router";
+import { useState } from "react";
 
 export default function Home() {
-    const navigation = useRouter();
+  const [loading, setLoading] = useState(true);
+
+  const navigation = useRouter();
   return (
     <View style={styles.container}>
       <Text>Home Sweet Home!</Text>
@@ -10,12 +13,16 @@ export default function Home() {
         title="Go to Settings!"
         onPress={() => navigation.push("/settings")}
       />
+      <Button
+        title="PRESS ME"
+        onPress={() => navigation.push("/settings")}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container: {  
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
