@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 
@@ -13,10 +13,12 @@ export default function Home() {
         title="Go to Settings!"
         onPress={() => navigation.push("/settings")}
       />
-      <Button
-        title="PRESS ME"
-        onPress={() => navigation.push("/settings")}
-      />
+      <TouchableOpacity
+      style={styles.button}
+      onPress={() => console.log("pressed")}
+    >
+      <Text style={{ color: 'black' }}>PRESS ME</Text>
+    </TouchableOpacity>
     </View>
   );
 }
@@ -28,4 +30,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  button: {
+    backgroundColor: 'blue', // Example background color
+    padding: 10,
+    marginTop: 10, // Adjust the margin as needed
+  }
 });
