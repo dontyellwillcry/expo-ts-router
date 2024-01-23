@@ -21,7 +21,7 @@ export default function Home() {
         style={loading ? styles.button : styles.otherButton} 
         onPress={() => setLoading(!loading)}
       >
-        <Text style={{ color: "black" }}>PRESS ME</Text>
+        <Text style={{ color: "black" }}>  Example State </Text>
       </TouchableOpacity>
     </View>
   );
