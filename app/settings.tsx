@@ -54,7 +54,8 @@ const Settings: React.FC<SettingsProps> = () => {
         placeholder="Enter text here"
         onChangeText={handleTextChange}
       />
-      <Text>{message.join(', ')}</Text>
+      <Text>{userInput.join(', ')}</Text>
+
       <Button
         title="Submit"
         onPress={submitText}/>
