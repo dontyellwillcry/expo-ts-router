@@ -53,6 +53,9 @@ const Settings: React.FC<SettingsProps> = () => {
       <TextInput
         placeholder="Enter text here"
         onChangeText={handleTextChange}
+        // Check out onEndEditing vs onChangeText
+        // onEndEditing={handleEndEditing} 
+
       />
       <Text>{userInput.join(', ')}</Text>
 
